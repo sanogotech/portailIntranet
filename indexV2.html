@@ -135,10 +135,38 @@
             right: -5px;
         }
         
+        /* Styles pour le slider d'images */
+        .activities-slider {
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        
+        .activities-slider .carousel-item img {
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            bottom: 20px;
+        }
+        
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+        
         @media (max-width: 992px) {
             .sidebar {
                 height: auto;
                 position: relative;
+            }
+            
+            .activities-slider .carousel-item img {
+                height: 200px;
             }
         }
     </style>
@@ -272,6 +300,56 @@
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     <strong><i class="fas fa-exclamation-triangle me-2"></i> Alerte :</strong> Maintenance prévue du système OXYGEN ce samedi de 20h à 22h.
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                
+                <!-- Slider des activités du groupe -->
+                <div class="activities-slider">
+                    <div id="activitiesCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#activitiesCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#activitiesCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#activitiesCarousel" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#activitiesCarousel" data-bs-slide-to="3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://via.placeholder.com/1200x400?text=Projet+Électrification+Rurale" class="d-block w-100" alt="Projet Électrification Rurale">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Électrification Rurale</h5>
+                                    <p>Notre projet phare d'électrification des zones rurales dans la région Nord</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/1200x400?text=Formation+Techniciens" class="d-block w-100" alt="Formation Techniciens">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Formation des Techniciens</h5>
+                                    <p>Programme de formation continue pour nos équipes techniques</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/1200x400?text=Infrastructures+Nouvelles" class="d-block w-100" alt="Nouvelles Infrastructures">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Nouvelles Infrastructures</h5>
+                                    <p>Inauguration de notre nouveau centre de distribution à Abidjan</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://via.placeholder.com/1200x400?text=Action+Sociale" class="d-block w-100" alt="Action Sociale">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Actions Sociales</h5>
+                                    <p>Notre engagement envers les communautés locales</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#activitiesCarousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="visually-hidden">Précédent</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#activitiesCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="visually-hidden">Suivant</span>
+                        </button>
+                    </div>
                 </div>
                 
                 <div class="row">
